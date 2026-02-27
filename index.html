@@ -49,16 +49,16 @@
     const hydra = new Hydra({ detectAudio: false });
 
     const palabras = {
-Teocuicatl=osc(15,3.3,200).modulate(o0,0.5).mult(shape(0)).rotate(45,0.5),
-Teponaztli=noise().modulate(o0,0.5).rotate(45,0.5).scale(2).blend(o1,0.1),
-Huehuetl=osc(10,5,0.5).modulate(o0,0.5).scale([1,2,0.4,2,0.3]),
-Xipetotec=noise(100,0.5,60).modulate(o0,0.5),
-Mexi=noise(1000,20,30).modulate(o0,0.5),
-Tezcatlipoca=osc(500,55,30).modulate(o0,0.5),
-CeAcatl=osc(4,500,5).modulate(o0,0.5),
-Tlallocan=noise(50,50,50).modulate(o0,0.5),
-Mictlan=noise(20,5,5).modulate(o0,0.5),
-Chicomoztoc=noise(40,0.5).diff(osc(3,0.5,4)).modulateRepeat(noise(4,0.5),0.9).rotate(0.005).scale([1,2,0.4,2,0.3].fast(20)),
+Teocuicatl: () => osc(15,3.3,200).modulate(o0,0.5).mult(shape(0)).rotate(45,0.5),
+Teponaztli: () => noise().modulate(o0,0.5).rotate(45,0.5).scale(2).blend(o1,0.1),
+Huehuetl: () => osc(10,5,0.5).modulate(o0,0.5).scale([1,2,0.4,2,0.3]),
+Xipetotec: () => noise(100,0.5,60).modulate(o0,0.5),
+Mexi: () => noise(1000,20,30).modulate(o0,0.5),
+Tezcatlipoca: () => osc(500,55,30).modulate(o0,0.5),
+CeAcatl: () => osc(4,500,5).modulate(o0,0.5),
+Tlallocan: () => noise(50,50,50).modulate(o0,0.5),
+Mictlan: () => noise(20,5,5).modulate(o0,0.5),
+Chicomoztoc: () => noise(40,0.5).diff(osc(3,0.5,4)).modulateRepeat(noise(4,0.5),0.9).rotate(0.005).scale([1,2,0.4,2,0.3].fast(20)),
 magt : () => {
   osc(40,0.5,() => a.fft[0]*200).out(o2)
   let shape = osc(60, 0.1, 2)
